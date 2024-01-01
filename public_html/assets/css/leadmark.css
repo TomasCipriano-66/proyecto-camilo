@@ -603,6 +603,7 @@ pre code {
   margin-left: -15px;
   justify-content: center;
   align-items: center;
+  min-width: 900;
 }
 
 .no-gutters {
@@ -5171,7 +5172,7 @@ input[type="button"].btn-block {
   margin-bottom: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 976px) {
   .card-deck {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -5190,7 +5191,7 @@ input[type="button"].btn-block {
     -webkit-flex: 1 0 0%;
         -ms-flex: 1 0 0%;
             flex: 1 0 0%;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
@@ -5217,9 +5218,9 @@ input[type="button"].btn-block {
   margin-bottom: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 976px) {
   .card-group {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -5808,7 +5809,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #ff6e42;
+  background-color: #fF6e42;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
@@ -8959,7 +8960,7 @@ button.bg-dark:focus {
 }
 
 .mt-7{
-  margin-top: 160px;
+  margin-top: 100px;
 }
 .mr-5,
 .mx-5 {
@@ -11537,7 +11538,7 @@ textarea.form-control {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 45px 0;
 }
 
 .section:nth-child(even) {
@@ -11638,98 +11639,133 @@ textarea.form-control {
   z-index: 1;
 }
 
-/* Estilo para ambas clases */
-.superpuestos::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-.foto-cont {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .foto {
+  position:relative;
   padding: 2%;
-  width: auto;
+  width: 70%;
+  height: auto;
   border-radius: 8%;
-}
-
-.superpuestos {
-  position: relative;
-  display: flex;
-  align-items: center; /* Centra verticalmente */
-  right: 1%;
-  transform: scale(1.28) translateX(-20%);
+  right: 20% ;
 }
 
 .present-card {
   position: absolute;
   top: 50%;
-  left: 90%;
+  left: 75%;
   transform: translate(-50%, -50%);
   padding: 20px;
   border: 4px solid #555;
   border-radius: 5%;
   background-color: #fff;
   text-align: center;
-  width: 60%;
+  width: 60%; /* Cambiado a un 100% del ancho total */
+  height: 34%;
+  max-width: 120%; /* Haciendo la tarjeta un 20% más grande */
 }
 
-.rowed {
+.rowed-superpuestos {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
   justify-content: center;
   align-items: center;
 }
 
+.rowed-superpuestos .superpuestos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  right: 30%;
+  transform: scale(1.28) translateX(-30%);
+}
+
 /* Ajustar según sea necesario para la responsividad */
 @media (max-width: 1350px) {
-
-  .rowed {
-    justify-content: center;
-    max-width: 1150px;
-  }
-
-  .superpuestos {
-    transform: scale(1.28) translateX(2%);
-    max-width: 1150px;
-  }
-
-  .foto-cont {
-    width: 60%; /* Ancho del 60% en dispositivos más pequeños */
-    float: none; /* No flotar en dispositivos más pequeños */
-
+  .foto {
+    width: 70%;
+    right: 0% ;
   }
 
   .present-card {
     position: relative;
-    width: 100%; /* Ancho completo en dispositivos más pequeños */
-    margin-top: 20px; /* Espacio entre la imagen y la tarjeta */
+    width: 65%;
+    margin-top: 20px;
     left: 0;
     transform: none;
   }
 }
 
 @media (max-width: 768px) {
-  .foto-cont {
-    width: 86%; /* Ancho del 60% en dispositivos más pequeños */
-    padding: 20px;
+  .foto{
+    width: 100%;
   }
   .present-card {
-    position: relative;
-    width: 80%; /* Ancho completo en dispositivos más pequeños */
-    margin-top: 10px; /* Espacio entre la imagen y la tarjeta */
-    left: 0;
-    transform: none;
+    width: 90%;
+    margin-top: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .circle {
   background-color: #ff6e42;
